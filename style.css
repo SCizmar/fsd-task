@@ -3562,7 +3562,9 @@ header {
         width: 140px;
         background-color: rgba(255, 255, 255, 0.15);
         border: 1px solid rgba(255, 255, 255, 0.25);
-        border-top: 1px solid #FA2A2A; }
+        border-top: 1px solid #FA2A2A;
+        list-style-type: none;
+        margin: 0; }
         header .main-nav #primary-menu > .menu-item .sub-menu li {
           margin: 0;
           padding: 15px 0;
