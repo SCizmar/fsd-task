@@ -1,0 +1,32 @@
+/*
+Theme Name: fsd-task
+Theme URI http://stcizmar.me/
+Author: Stefan Cizmar
+Author URI: http://stcizmar.me/
+Description: Test task for FSD
+
+*/
+
+
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+@import "vendor/normalize";
+@import "vendor/bootstrap";
+
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/lists";
+@import "components/media";
+@import "components/modal";
+
+@import "layout/header";
+@import "layout/footer";
+@import "layout/about";
+@import "layout/slider";
+@import "layout/featured";
+@import "layout/products";
+@import "layout/contact";

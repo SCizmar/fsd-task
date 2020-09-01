@@ -1,0 +1,64 @@
+.about-section {
+    padding: 120px 0 90px;
+
+    @media screen and (max-width: 991px) {
+        padding: 50px 0;
+    }
+
+    .about-section-content {
+        align-items: center;
+    }
+
+    .about-left {
+
+        @media screen and (max-width: 991px) {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+
+        .audi-slogan-container {
+            background: $dark;
+            padding: 30px;
+            position: relative;
+            z-index: 2;
+            height: 520px;
+            display: flex;
+            align-items: flex-end;
+            margin-left: calc(8.33333% + 45px);
+            margin-right: calc(8.33333% + 45px);
+
+            .slogan {
+                font-family: $montserrat;
+                font-style: italic;
+                font-size: 1.4rem;
+                line-height: 2.5rem;
+                color: $white;
+                opacity: .5;
+                margin-bottom: 0;
+            }
+        }
+
+        > img {
+            position: absolute;
+            z-index: 9;
+            top: calc(50% - 125px);
+        }
+    }
+
+    .about-right {
+
+        .section-subtitle {
+            line-height: 3rem;
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: $dark;
+        }
+
+        p {
+            color: $text-gray;
+            line-height: 2.5rem;
+        }
+    }
+}

@@ -1,0 +1,162 @@
+.products {
+    padding: 80px 0;
+    position: relative;
+
+    .section-title {
+        text-align: center;
+    }
+
+    .filters {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin: 40px 0 30px;
+        width: 100%;
+
+        li {
+            margin: 0 6px;
+            line-height: 2rem;
+            padding: 0 19px 12px;
+
+            a {
+                text-decoration: none;
+                color: $text-inactive;
+            }
+
+            &.active {
+                border-bottom: 2px solid $red;
+                
+                a {
+                    color: $dark;
+                }
+            }
+
+            &:first-of-type {
+                margin-left: 0;
+            }
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .car-cards {
+
+        .car-card-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .car-card {
+            border: 1px solid #F3F3F5;
+            border-radius: 3px;
+            box-shadow: 0 15px 25px -20px rgba(0,0,0,0.1);
+            padding: 20px 20px 18px;
+            display: flex;
+            flex: 1;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+
+            @media screen and (max-width: 991px) {
+                margin-bottom: 30px;
+            }
+
+            .new {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                padding: 8px 7px;
+                font-family: $roboto;
+                text-transform: uppercase;
+                font-size: 1.1rem;
+                line-height: 1.3rem;
+                letter-spacing: 1px;
+                font-weight: bold;
+                color: $white;
+                background: $purple;
+                border-radius: 3px;
+            }
+
+            img {
+                //max-height: 90px;
+            }
+
+            .specs {
+                margin: 19px 0 5px;
+                font-size: 1.4rem;
+                line-height: 1.6rem;
+                color: $text-inactive;
+            }
+
+            .model {
+                color: $dark;
+                margin-bottom: 5px;
+                font-size: 2rem;
+                line-height: 3rem;
+            }
+
+            .config {
+                font-size: 1.2rem;
+                line-height: 2rem;
+                letter-spacing: -.5px;
+                color: $blue;
+                margin-bottom: 15px;
+            }
+
+            .features {
+                margin: 15px 0 20px;
+                list-style-image: url('images/Path.svg');
+                list-style-position: inside;
+                align-self: flex-start;
+
+                li {
+                    color: $text-inactive;
+                    font-size: 1.3rem;
+                    line-height: 3rem;
+                }
+            }
+
+            .price {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+
+                span {
+                    font-family: $roboto;
+                    font-size: 1.3rem;
+                    color: $text-inactive;
+                    line-height: 1.3rem;
+                }
+
+                .amount {
+                    margin-bottom: 0;
+                    font-size: 2rem;
+                    line-height: 3rem;
+                    color: $dark;
+                    margin-top: 2px;
+                }
+
+                .buy-now {
+                    border: 0;
+                    padding: 9px 18px;
+                    border-radius: 17px;
+                    background-color: rgba(250, 42, 42, .1);
+                    font-size: 1.3rem;
+                    line-height: 1.6rem;
+                    font-family: $roboto;
+                    color: $red;
+                    
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,87 @@
+.contact {
+    background: linear-gradient(135deg, #282A2F 0%, #000000 100%);
+    background-repeat: no-repeat;
+    padding: 120px 0;
+
+    @media screen and (max-width: 641px) {
+        padding: 60px 0 120px;
+    }
+
+    .section-title {
+        font-size: 4.8rem;
+        line-height: 5.8rem;
+        margin-right: -25px;
+        z-index: 10;
+        position: relative;
+
+        @media screen and (max-width: 641px) {
+            margin-right: 0;
+        }
+    }
+
+    .contact-form-container {
+        
+        .wpcf7 {
+            padding: 22px 48px 52px;
+            background-color: #011F05;
+            z-index: 8;
+
+            input, textarea {
+                width: 100%;
+                border: 1px solid rgba(255,255,255,0.25);
+                border-radius: 3px;
+                background-color: rgba(255,255,255,0.15);
+                font-size: 1.4rem;
+                color: $red;
+                font-family: $roboto;
+                letter-spacing: 1px;
+                line-height: 2.6rem;
+                margin-top: 30px;
+                padding: 17px 15px;
+                text-transform: uppercase;
+            }
+
+            textarea {
+                resize: none;
+                max-height: 150px;
+            }
+
+            .wpcf7-submit {
+                width: auto;
+                padding: 19px 34px;
+                display: block;
+                margin: 30px auto 0;
+                line-height: 1.9rem;
+                color: $white;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+
+            .ajax-loader {
+                position: absolute;
+            }
+        }
+
+    }
+
+    .contact-form-image {
+        position: absolute;
+        bottom: 47px;
+        left: -174px;
+        z-index: 9;
+
+        @media screen and (max-width: 1439px) {
+            max-width: 75%;
+        }
+
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+    }
+}

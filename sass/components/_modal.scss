@@ -1,0 +1,243 @@
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: $dark, $alpha: .8);
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+
+    &.modal-active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .modal-content {
+        background-color: $white;
+        border-radius: 15px;
+        display: flex;
+        position: relative;
+
+        @media screen and (max-width: 991px) {
+            max-width: 90%;
+            display: block;
+        }
+
+        .vehicle-data {
+            background-color: #F1F1F5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 15px 0 0 15px;
+            padding: 34px 68px;
+
+            .vehicle-data-top {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                max-width: 200px;
+                align-items: center;
+                margin-bottom: 40px;
+                
+                .new {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    padding: 5px 7px;
+                    font-family: $roboto;
+                    text-transform: uppercase;
+                    font-size: 1rem;
+                    line-height: 1.3rem;
+                    letter-spacing: 1px;
+                    font-weight: bold;
+                    color: $white;
+                    background: $purple;
+                    border-radius: 3px;
+                }
+
+                img {
+                    margin-bottom: 26px;
+                }
+
+                .specs {
+                    color: $text-inactive;
+                    font-size: 1.4rem;
+                    line-height: 1.8rem;
+                    margin-bottom: 4px;
+                }
+
+                .model {
+                    font-weight: 600;
+                    font-size: 2.4rem;
+                    line-height: 3.4rem;
+                }
+            }
+
+            .starting-price {
+                background: $dark;
+                border-radius: 15px;
+                padding: 13px 60px;
+                text-align: center;
+
+                span {
+                    font-family: $roboto;
+                    font-size: 1.3rem;
+                    line-height: 1.3rem;
+                    opacity: .5;
+                    color: $white;
+                }
+                
+                p {
+                    margin-bottom: 0;
+                    margin-top: 2px;
+                    font-weight: 100;
+                    font-size: 2.4rem;
+                    line-height: 3rem;
+                    color: #fff;
+                }
+            }
+        }
+
+        .vehicle-addons {
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+
+            .modal-title {
+                font-size: 1.8rem;
+                font-weight: 600;
+                color: $dark;
+                line-height: 2.2rem;
+                margin-bottom: 6px;
+            }
+
+            .modal-subtitle {
+                font-size: 1.4rem;
+                line-height: 1.8rem;
+                color: $dark;
+                opacity: .7;
+                margin-bottom: 34px;
+            }
+
+            .addons-list {
+                display: flex;
+                flex-direction: column;
+
+                label {
+                    font-size: 1.4rem;
+                    line-height: 2rem;
+                    color: $dark;
+                    display: flex;
+                    position: relative;
+                    padding-left: 28px;
+                    padding-bottom: 15px;
+                    margin-bottom: 15px;
+                    width: 100%;
+                    min-width: 525px;
+                    border-bottom: 1px solid #F1F1F1;
+                    
+                    @media screen and (max-width: 641px) {
+                        min-width: auto;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                        border-bottom: 0;
+                        padding-bottom: 0;
+                    }
+
+                    input {
+                        position: absolute;
+                        opacity: 0;
+                        height: 0;
+                        width: 0;
+
+                        &:checked ~ .checkmark:after {
+                            display: block;
+                        }
+
+                        &:checked ~ .checkmark {
+                            background: $dark;
+                        }
+                    }
+
+                    .price {
+                        margin-left: auto;
+                        color: $dark;
+                        line-height: 2rem;
+                        font-weight: 600;
+                    }
+
+                    .checkmark {
+                        width: 18px;
+                        height: 18px;
+                        background-color: $white;
+                        display: block;
+                        border: 1px solid $dark;
+                        position: absolute;
+                        left: 0;
+                        top: 1px;
+
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            display: none;
+                            left: 5px;
+                            top: 5px;
+                            width: 7px;
+                            height: 4px;
+                            border: solid $white;
+                            border-width: 0 1px 1px 0;
+                            transform: rotateX(180deg) rotateZ(225deg);
+                        }
+                    }
+                }
+            }
+        }
+
+        .btn-close {
+            position: absolute;
+            width: 42px;
+            height: 42px;
+            right: -21px;
+            top: -21px;
+            border-radius: 50%;
+            background-color: $dark;
+            border: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &::after {
+                content: '';
+                width: 11px;
+                height: 2px;
+                transform: rotate(45deg);
+                background: #F5F5F5;
+                position: absolute;
+            }
+
+            &::before {
+                content: '';
+                width: 11px;
+                height: 2px;
+                transform: rotate(-45deg);
+                background: #F5F5F5;
+                position: absolute;
+            }
+        }
+    }
+}

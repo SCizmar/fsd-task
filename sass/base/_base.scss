@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+    font-size: 10px;
+    box-sizing: border-box;
+    margin-top: 0 !important;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: $montserrat;
+    position: relative;
+}

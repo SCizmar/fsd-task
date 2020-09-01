@@ -1,0 +1,92 @@
+.slider-container {
+    position: relative;
+
+    .slider {
+        min-height: 720px;
+        display: flex;
+        align-items: center;
+        background-size: cover;
+        background-position: bottom;
+        background-color: #000001;
+
+        @media screen and (max-width: 1440px) {
+            background-image: url('images/header-img-1440.jpg');
+        }
+
+        @media screen and (min-width: 1441px) {
+            background-image: url('images/header-img-1920.jpg');
+        }
+
+        .slide-content {
+            flex: 1;
+
+            .slider-content {
+                margin-top: 100px;
+            }
+
+            .slide-title {
+                color: $white;
+                font-family: $montserrat;
+                font-weight: bold;
+                font-size: 4.8rem;
+                line-height: 5.8rem;
+                margin-bottom: 40px;
+            }
+
+            .slide-description {
+                color: $gray;
+                margin: 0 95px 0 20px;
+                display: flex;
+
+                .red-line {
+                    width: 1px;
+                    background-color: $red;
+                    margin-top: 6px;
+                    margin-bottom: 6px;
+                }
+
+                p {
+                    margin-bottom: 0;
+                    font-size: 1.4rem;
+                    line-height: 2.6rem;
+                    padding-left: 30px;
+                }
+            }
+
+        }
+    }
+
+    .prev-arrow, .next-arrow {
+        width: 51px;
+        height: 51px;
+        border: 1px solid rgba(255,255,255,0.25);
+        background-color: rgba(255,255,255,0.15);
+        position: absolute;
+        top: calc(50% - 25.5px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 641px) {
+            display: none !important;
+        }
+    }
+
+    .prev-arrow {
+        left: 0;
+        border-radius: 0 3px 3px 0;
+    }
+
+    .next-arrow {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+
+        img {
+            transform: rotateY(180deg);
+        }
+    }
+}
