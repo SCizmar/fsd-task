@@ -13,11 +13,11 @@ $args = array(
     'exclude' => 1
 );
 
-$tax = 'category';
+$loop = new WP_Query( $args );
+
+$tax = 'car_category';
 $terms = get_terms($tax);
 $filters = get_categories($args);
-
-$loop = new WP_Query( $args );
 
 ?>
 

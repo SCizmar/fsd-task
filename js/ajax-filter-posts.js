@@ -7,25 +7,20 @@ jQuery('.category-filter').click(function (event) {
     }
     // Get tag slug from title attirbute
     var selected_taxonomy = $(this).attr('title');
+    //console.log(selected_taxonomy);
     $('.car-cards').fadeOut();
     var data = {
         action: 'filter_posts',
         afp_nonce: afp_vars.afp_nonce,
         taxonomy: selected_taxonomy,
     };
-    $.ajax({
-        type: 'post',
-        dataType: 'html',//Return type is html
-        url: afp_vars.ajaxurl,
-        data: data,
-        success: function (data) {
-            $('.car-cards').html(data);
-            $('.car-cards').fadeIn();
-        },
-        error: function () {
-            $('.car-cards').html('No posts found');
-            $('.car-cards').fadeIn();
-        }
-    })
+    jQuery.post( afp_vars.afp_ajax_url, data, function(response) {
+
+    if( response ) {
+    //alert(response);
+        jQuery('.car-cards').fadeIn();
+        jQuery('.car-cards').html( response );
+    };
+});
 
 });
